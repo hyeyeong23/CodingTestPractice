@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Application01 {
 
+	/* 키 뿐만 아니라 사람 수도 난수로 생성하고, 최댓값 구하기 */
 	static int maxof(int[] a) {
 		int max = a[0];
 		for(int i = 1; i < a.length; i++) {
