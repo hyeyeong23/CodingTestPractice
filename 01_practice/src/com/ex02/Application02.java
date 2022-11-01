@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Application02 {
 
+	/* 배열 요소를 역순으로 정렬하기 */
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
 		a[idx1] = a[idx2];
