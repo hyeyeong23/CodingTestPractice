@@ -17,7 +17,7 @@ public class Application03 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("요솟수를 입력하세요 : ");
+		System.out.print("요솟수(길이)를 입력하세요 : ");
 		int num = sc.nextInt();
 		
 		int[] a = new int[num];
@@ -27,7 +27,7 @@ public class Application03 {
 			a[i] = sc.nextInt();
 		}
 		
-		System.out.println("모든 요소의 합게는 " + sumOf(a) + "입니다.");
+		System.out.println("모든 요소의 합계는 " + sumOf(a) + "입니다.");
 	}
 
 }

@@ -24,7 +24,7 @@ public class Application02 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("요솟수 : ");
+		System.out.print("요솟수(길이) : ");
 		int num = sc.nextInt();
 		
 		int[] x = new int[num];

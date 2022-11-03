@@ -15,7 +15,7 @@ public class Application04 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("a의 요솟수 : ");
+		System.out.print("a의 요솟수(길이) : ");
 		int numa = sc.nextInt();
 		int[] a = new int[numa];
 		for(int i = 0; i < numa; i++) {
@@ -23,7 +23,7 @@ public class Application04 {
 			a[i] = sc.nextInt();
 		}
 		
-		System.out.print("b의 요솟수 : ");
+		System.out.print("b의 요솟수(길이) : ");
 		int numb = sc.nextInt();
 		int[] b = new int[numb];
 		for(int i = 0; i < numb; i++) {
