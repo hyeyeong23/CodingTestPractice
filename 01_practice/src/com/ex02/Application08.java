@@ -73,11 +73,16 @@ public class Application08 {
 		int month = sc.nextInt();
 		System.out.print("일 : ");
 		int day = sc.nextInt();
+		Application08 date = new Application08(year, month, day);
 		
 		System.out.print("전/후 날짜를 구한 n값을 입력하세요 : ");
 		int n = sc.nextInt();
 		
+		Application08 d1 = date.after(n);
+		System.out.println(n + "일 후의 날짜는 " + d1.y + "년" + d1.m + "월" + d1.d + "일입니다.");
 		
+		Application08 d2 = date.before(n);
+		System.out.printf("%d일 전의 날짜는 %d년%d월%d일입니다.\n", n, d2.y, d2.m, d2.d);
 	}
 
 }
