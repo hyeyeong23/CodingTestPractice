@@ -10,19 +10,14 @@ public class Application06 {
 		int digits = 0;
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-//		System.out.printf(String.format("%%2d | %%%dd\n", n), r, x);
+		System.out.println(r + "|     " + x);
 		do {
-//			System.out.printf("  +");
-//			for(int i = 0; i < n + 2; i++) {
-//				System.out.print("-");
-//			}
-//			System.out.println();
-//			
-//			if(x / r != 0) {
-//				System.out.printf(String.format("%%2d | %%%dd   ... %%d\n", n), r, x / r, x % r);
-//			} else {
-//				System.out.printf(String.format("     %%%dd   ... %%d\n", n), x / r, x % r);
-//			}
+			System.out.println(" + ------");
+			if(x / r > 0) {
+				System.out.println(r + "|     " + x / r + "..." + x % r);
+			} else {
+				System.out.println("       " + x / r + "..." + x % r);
+			}
 			d[digits++] = dchar.charAt(x % r);
 			x /= r;
 		} while (x != 0);
