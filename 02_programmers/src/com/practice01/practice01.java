@@ -6,7 +6,8 @@ import java.util.List;
 public class practice01 {
 
 	public static void main(String[] args) {
-		int[][] score = {{80, 70}, {90, 50}, {40, 70}, {50, 80}};
+//		int[][] score = {{80, 70}, {90, 50}, {40, 70}, {50, 80}};
+		int[][] score = {{80, 70}, {70, 80}, {30, 50}, {90, 100}, {100, 90}, {100, 100}, {10, 30}};
 		int[] avg = new int[score.length];
 		int count = 0;
 		List<Integer> list = new ArrayList<>();
@@ -24,15 +25,14 @@ public class practice01 {
 		
 		for(int i = 0; i < list.size(); i++) {
 			int tempScore = list.get(i);
-			count = list.size();
+			count = 1;
 			for(int j = 0; j < list.size(); j++) {
-				if(tempScore > list.get(j)) {
-					count--;
+				if(tempScore < list.get(j)) {
+					count++;
 				}
 			}
 			rank.add(count);
 		}
 		System.out.println(rank);
 	}
-
 }
