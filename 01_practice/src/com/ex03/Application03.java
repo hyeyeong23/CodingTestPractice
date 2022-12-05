@@ -24,10 +24,10 @@ public class Application03 {
 	}
 
 	private static int search(int[] x, int num, int key, int[] idx) {
-		int index = 0;
+		int index = 0;							// 배열에 담을 때 사용할 index값
 		for(int i = 0; i < num; i++) {
 			if(x[i] == key) {
-				idx[index++] = i;
+				idx[index++] = i;				// key값과 일치할 경우 idx 배열에 담기
 			}
 		}
 		return index;
