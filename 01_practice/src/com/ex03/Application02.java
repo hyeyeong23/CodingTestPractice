@@ -44,7 +44,26 @@ public class Application02 {
 		}
 		System.out.println();
 		
-		System.out.print("   |");
+		for(int i = 0; i < num; i++) {
+			System.out.print("   | ");
+			
+			if(i == 0) {
+				System.out.println("*");
+			} else {
+				
+				for(int k = 0; k < i; k++) {
+					System.out.print("   ");
+				}
+				System.out.println("*");
+			}
+			System.out.print(" " + i + " |");
+			
+			for(int j = 0; j < num; j++) {
+				System.out.print(" " + x[j] + " ");
+			}
+			System.out.println();
+		}
+		
 		
 		/* 배열에서 key값에 해당하는 값을 검색하여 i를 반환 */
 		for(int i = 0; i < num; i++) {
