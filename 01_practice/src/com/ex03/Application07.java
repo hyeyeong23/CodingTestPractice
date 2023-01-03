@@ -54,6 +54,9 @@ public class Application07 {
 			System.out.println("그 값은 x[" + index + "]에 있습니다.");
 			System.out.println("찾은 데이터 : " + x[index]);
 		}
+		for(int i = 0; i < x.length; i++) {
+			System.out.println(x[i]);
+		}
 	}
 
 }
