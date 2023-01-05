@@ -23,5 +23,19 @@ public class tr01 {
 			capacity = 0;
 		}
 	}
+	
+	public int push(int x) throws OverflowIntStackException {
+		if(ptr >= capacity) {
+			throw new OverflowIntStackException();
+		}
+		return stk[ptr++] = x;
+	}
+	
+	public int pop() throws EmptyIntStackException {
+		if(ptr <= 0) {
+			throw new EmptyIntStackException();
+		}
+		return stk[--ptr];
+	}
 
 }
