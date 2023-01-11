@@ -27,9 +27,29 @@ public class tr02 {
 					System.out.println("스택이 가득 찼습니다.");
 				}
 				break;
+			
+			case 2:
+				try {
+					x = s.pop();
+					System.out.println("팝한 데이터는 " + x + "입니다.");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("스택이 비어 있습니다.");
+				}
+				break;
+			
+			case 3:
+				try {
+					x = s.peek();
+					System.out.println("피크한 데이터는 " + x + "입니다.");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("스택이 비어 있습니다.");
+				}
+				break;
+			
+			case 4:
+				s.dump();
+				break;
 			}
-	
 		}
 	}
-
 }
