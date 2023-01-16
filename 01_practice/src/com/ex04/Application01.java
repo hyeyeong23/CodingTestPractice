@@ -68,7 +68,7 @@ public class Application01 {
 					System.out.println("용량: " + s.getCapacity());
 					System.out.println("데이터수: " + s.size());
 					System.out.println("비어 " + (s.isEmpty() ? "있습니다." : "있지 않습니다."));
-					System.out.println("비어 " + (s.isFull() ? "차 있습니다." : "차 있지 않습니다."));
+					System.out.println("가득 " + (s.isFull() ? "차 있습니다." : "차 있지 않습니다."));
 					break;
 			}
 		}
