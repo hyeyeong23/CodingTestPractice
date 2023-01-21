@@ -102,4 +102,66 @@ public class DoubleHeadIntStack {
 		}
 		return -1;
 	}
+	
+	/* 스택을 비움 */
+	public void clear(AorB sw) {
+		switch (sw) {
+			case StackA: ptrA = 0; break;
+			case StackB: ptrB = capacity - 1; break;
+		}
+	}
+	
+	/* 스택 용량을 반환(A와 B의 합계) */
+	public int getCapacity() {
+		return capacity;
+	}
+	
+	/* 스택에 쌓여있는 데이터수를 반환 */
+	public int size(AorB sw) {
+		switch (sw) {
+			case StackA: return ptrA;
+			case StackB: return capacity - ptrB - 1;
+		}
+		return 0;
+	}
+	
+	/* 스택이 비어 있는지 확인 */
+	public boolean isEmpty(AorB sw) {
+		switch(sw) {
+			case StackA: return ptrA <= 0;
+			case StackB: return ptrB >= capacity - 1;
+		}
+		return true;
+	}
+	
+	/* 스택이 가득 찼는지 확인 */
+	public boolean isFull() {
+		return ptrA >= ptrB + 1;
+	}
+	
+	/* 스택 안의 모든 데이터를 바닥부터 꼭대기 순서로 출력 */
+	public void dump(AorB sw) {
+		switch(sw) {
+			case StackA:
+				if(ptrA <= 0) {
+					System.out.println("스택이 비어 있습니다.");
+				} else {
+					for(int i = 0; i < ptrA; i++) {
+						System.out.println(stk[i] + " ");
+					}
+					System.out.println();
+				}
+				break;
+			case StackB:
+				if(ptrB >= capacity - 1) {
+					System.out.println("스택이 비어 있습니다.");
+				} else {
+					for(int i = capacity - 1; i > ptrB; i--) {
+						System.out.println(stk[i] + " ");
+					}
+					System.out.println();
+				}
+				break;
+		}
+	}
 }
