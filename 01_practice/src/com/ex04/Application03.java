@@ -39,6 +39,39 @@ public class Application03 {
 						System.out.println("스택이 비어 있습니다.");
 					}
 					break;
+				case 3:
+					try {
+						x = s.peek(DoubleHeadIntStack.AorB.StackA);
+						System.out.println("피크한 데이터는 " + x + "입니다.");
+					} catch (DoubleHeadIntStack.EmptyDoubleHeadIntStackException e) {
+						System.out.println("스택이 비어 있습니다.");
+					}
+					break;
+				case 4:
+					s.dump(DoubleHeadIntStack.AorB.StackA);
+					break;
+				case 5:
+					System.out.print("검색할 데이터: ");
+					x = sc.nextInt();
+					n = s.indexOf(DoubleHeadIntStack.AorB.StackA, x);
+					if(n >= 0) {
+						System.out.println("꼭대기에서 " + (s.size(DoubleHeadIntStack.AorB.StackA) - n) + "번째에 있습니다.");
+					} else {
+						System.out.println("그 데이터가 없습니다.");
+					}
+					break;
+				case 6:
+					s.clear(DoubleHeadIntStack.AorB.StackA);
+					break;
+				case 7:
+					System.out.print("데이터: ");
+					x = sc.nextInt();
+					try {
+						s.push(DoubleHeadIntStack.AorB.StackA, x);
+					} catch (DoubleHeadIntStack.OverflowDoubleHeadIntStackException e) {
+						System.out.println("스택이 가득 찼습니다.");
+					}
+					break;
 			}
 		}
 	}
