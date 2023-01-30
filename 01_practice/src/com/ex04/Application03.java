@@ -72,6 +72,46 @@ public class Application03 {
 						System.out.println("스택이 가득 찼습니다.");
 					}
 					break;
+				case 8:
+					try {
+						x = s.pop(DoubleHeadIntStack.AorB.StackB);
+						System.out.println("팝한 데이터는 " + x + "입니다.");
+					} catch (DoubleHeadIntStack.EmptyDoubleHeadIntStackException e) {
+						System.out.println("스택이 비어 있습니다.");
+					}
+					break;
+				case 9:
+					try {
+						x = s.peek(DoubleHeadIntStack.AorB.StackB);
+						System.out.println("피크한 데이터는 " + x + "입니다.");
+					} catch (DoubleHeadIntStack.EmptyDoubleHeadIntStackException e) {
+						System.out.println("스택이 비어 있습니다.");
+					}
+					break;
+				case 10:
+					s.dump(DoubleHeadIntStack.AorB.StackB);
+					break;
+				case 11:
+					System.out.print("검색할 데이터: ");
+					x = sc.nextInt();
+					n = s.indexOf(DoubleHeadIntStack.AorB.StackB, x);
+					if(n >= 0) {
+						System.out.println("꼭대기에서 " + (s.size(DoubleHeadIntStack.AorB.StackB) - (s.getCapacity() - n) + 1) + "번째에 있습니다.");
+					} else {
+						System.out.println("그 데이터가 없습니다.");
+					}
+					break;
+				case 12:
+					s.clear(DoubleHeadIntStack.AorB.StackB);
+					break;
+				case 13:
+					System.out.println("용량: " + s.getCapacity());
+					System.out.println("A의 데이터수: " + s.size(DoubleHeadIntStack.AorB.StackA));
+					System.out.println("B의 데이터수: " + s.size(DoubleHeadIntStack.AorB.StackB));
+					System.out.println("A는 비어 " + (s.isEmpty(DoubleHeadIntStack.AorB.StackA) ? "있습니다." : "있지 않습니다."));
+					System.out.println("B는 비어 " + (s.isEmpty(DoubleHeadIntStack.AorB.StackB) ? "있습니다." : "있지 않습니다."));
+					System.out.println("가득 차 " + (s.isFull() ? "있습니다." : "있지 않습니다."));
+				break;
 			}
 		}
 	}
