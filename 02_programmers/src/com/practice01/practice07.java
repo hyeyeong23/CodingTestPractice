@@ -5,6 +5,8 @@ public class practice07 {
 	String my_string = "3 + 4";
 	int chicken = 100;
 	int result = 11;
+	int[] array = {3, 10, 28};
+	int n = 20;
 	
 	/* 문자열 계산하기 */
 	public int solution(String my_string) {
@@ -34,6 +36,24 @@ public class practice07 {
         }
         
         return answer;
+    }
+    
+    /* 가까운 수 */
+    public class Solution {
+        public int solution(int[] array, int n) {
+            int answer = 0;
+            int temp = Math.abs(array[0] - n);
+            
+            for(int i = 0; i < array.length; i++) {
+                if(Math.abs(array[i] - n) < temp) {
+                    temp = Math.abs(array[i] - n);
+                    answer = array[i];
+                } else if (Math.abs(array[i] - n) == temp) {
+                    answer = array[i - 1] <= array[i]? array[i - 1] : array[i];
+                }
+            }      
+            return answer;
+        }
     }
 
 }
