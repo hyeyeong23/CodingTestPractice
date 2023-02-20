@@ -7,6 +7,9 @@ public class practice07 {
 	int result = 11;
 	int[] array = {3, 10, 28};
 	int n = 20;
+	int i = 1;
+	int j = 13;
+	int k = 1;
 	
 	/* 문자열 계산하기 */
 	public int solution(String my_string) {
@@ -55,5 +58,25 @@ public class practice07 {
             return answer;
         }
     }
-
+    
+    /* k의 개수 */
+    public int solution(int i, int j, int k) {
+        int answer = 0;
+        int remain = 0;
+        
+        for(int a = i; a <= j; a++) {
+            int num = a;
+            
+            while(num > 0) {
+                remain = num % 10;
+                if(remain == k) {
+                    answer++;
+                    num /= 10;
+                } else {
+                    num /= 10;
+                } 
+            }
+        }
+        return answer;
+    }
 }
