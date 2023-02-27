@@ -10,6 +10,7 @@ public class practice07 {
 	int i = 1;
 	int j = 13;
 	int k = 1;
+	String my_string1 = "bus";
 	
 	/* 문자열 계산하기 */
 	public int solution(String my_string) {
@@ -78,5 +79,18 @@ public class practice07 {
             }
         }
         return answer;
+    }
+    
+    /* 모음 제거 */
+    public String solution1(String my_string1) {
+        String str = my_string1;
+        
+        str = str.replace("a", "");
+        str = str.replace("e", "");
+        str = str.replace("i", "");
+        str = str.replace("o", "");
+        str = str.replace("u", "");
+        
+        return str;
     }
 }
