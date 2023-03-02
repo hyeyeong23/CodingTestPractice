@@ -11,6 +11,7 @@ public class practice07 {
 	int j = 13;
 	int k = 1;
 	String my_string1 = "bus";
+	int[] common = {1, 2, 3, 4};
 	
 	/* 문자열 계산하기 */
 	public int solution(String my_string) {
@@ -105,6 +106,22 @@ public class practice07 {
               System.out.println(i + "=" + answer);
             } 
         }
+        return answer;
+    }
+    
+    /* 다음에 올 숫자 */
+    public int solution(int[] common) {
+        int answer = 0;
+        
+        for(int i = 0; i < common.length / 2; i++) {
+            int num = common.length;
+            if(common[i + 1] - common[i] == common[i + 2] - common[i + 1]) {
+                answer = common[num - 1] + (common[i + 1] - common[i]);
+            } else if (common[i + 1] / common[i] == common[i + 2] / common[i + 1]) {
+                answer = common[num - 1] * (common[i + 1] / common[i]);
+            }
+        }
+        
         return answer;
     }
 }
