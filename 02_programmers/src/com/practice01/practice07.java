@@ -12,6 +12,8 @@ public class practice07 {
 	int k = 1;
 	String my_string1 = "bus";
 	int[] common = {1, 2, 3, 4};
+	String before = "olleh";
+	String after = "hello";
 	
 	/* 문자열 계산하기 */
 	public int solution(String my_string) {
@@ -120,6 +122,22 @@ public class practice07 {
             } else if (common[i + 1] / common[i] == common[i + 2] / common[i + 1]) {
                 answer = common[num - 1] * (common[i + 1] / common[i]);
             }
+        }
+        
+        return answer;
+    }
+    
+    /* a로 b 만들기 */
+    public int solution(String before, String after) {
+        int answer = 0;
+        
+        String[] strArr = before.split("");
+        
+        for(int i = 0; i < strArr.length; i++) {
+            after = after.replaceFirst(strArr[i], "");
+        }
+        if(after.length() == 0) {
+            answer = 1;
         }
         
         return answer;
