@@ -4,6 +4,7 @@ public class practice06 {
 
 	String[] id_pw = {"meosseugi", "1234"};
 	int n = 10;
+	int numbers[] = {1, 2, 3, 4, 6, 7, 8, 0};
 	
 	/* 로그인 성공 문제 풀기 */
 	public String solution(String[] id_pw, String[][] db) {
@@ -36,6 +37,16 @@ public class practice06 {
             }
         }
         return answer;
+    }
+	
+	/* 없는 숫자 더하기 */
+	public int solution(int[] numbers) {
+        int sum = 0;
+        
+        for(int j = 0; j < numbers.length; j++) {
+            sum += numbers[j];
+        }
+        return 45 - sum;
     }
 
 }
