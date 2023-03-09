@@ -6,11 +6,11 @@ public class Application01 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		IntStack s = new IntStack(64);
+		IntStack s = new IntStack(5);
 		
 		while(true) {
 			System.out.printf("현재 데이터 개수 : %d / %d\n", s.size(), s.getCapacity());
-			System.out.print("(1) 푸시 (2) 팝 (3) 피크 " + "(4) 덤프 (5) 검색 (6) 비움 " + "(7) 출력 (0) 종료 : ");
+			System.out.print("(1) 푸시 (2) 팝 (3) 피크 (4) 덤프 (5) 검색 (6) clear (7) 비어졌는지? (8) 채워졌는지? (0) 종료 : ");
 			
 			int menu = sc.nextInt();
 			if(menu == 0) break;
@@ -54,7 +54,7 @@ public class Application01 {
 					x = sc.nextInt();
 					int n = s.indexOf(x);
 					if(n >= 0) {
-						System.out.println("꼭대기에서 " + (s.size() - n) + "번째에 있습니다.");
+						System.out.println("위에서 " + (s.size() - n) + "번째에 있습니다.");
 					} else {
 						System.out.println("그 데이터가 없습니다.");
 					}
@@ -65,10 +65,19 @@ public class Application01 {
 					break;
 					
 				case 7:
-					System.out.println("용량: " + s.getCapacity());
-					System.out.println("데이터수: " + s.size());
-					System.out.println("비어 " + (s.isEmpty() ? "있습니다." : "있지 않습니다."));
-					System.out.println("가득 " + (s.isFull() ? "차 있습니다." : "차 있지 않습니다."));
+					if(s.isEmpty()) {
+						System.out.println("비어 있습니다.");
+					} else {
+						System.out.println("비어 있지 않습니다.");
+					}
+					break;
+					
+				case 8:
+					if(s.isFull()) {
+						System.out.println("채워져 있습니다.");
+					} else {
+						System.out.println("채워져 있지 않습니다.");
+					}
 					break;
 			}
 		}
