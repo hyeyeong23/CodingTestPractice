@@ -1,5 +1,7 @@
 package com.practice01;
 
+import java.util.Arrays;
+
 public class practice07 {
 	
 	String my_string = "3 + 4";
@@ -138,6 +140,22 @@ public class practice07 {
         }
         if(after.length() == 0) {
             answer = 1;
+        }
+        
+        return answer;
+    }
+    
+    /* 문자열 정렬하기 */
+    public String solution2(String my_string) {
+        String answer = "";
+        
+        my_string = my_string.toLowerCase();
+        
+        char[] charArr = my_string.toCharArray();       
+        Arrays.sort(charArr);
+        
+        for(int i = 0; i < charArr.length; i++) {
+            answer += charArr[i];
         }
         
         return answer;
