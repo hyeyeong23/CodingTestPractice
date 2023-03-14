@@ -160,4 +160,21 @@ public class practice07 {
         
         return answer;
     }
+    
+    /* 컨트롤 제트 */
+    public int solution3(String s) {
+        int answer = 0;
+        
+        String[] arr = s.split(" ");
+        
+        for(int i = 0; i < arr.length; i++) {
+            if(!arr[i].equals("Z")) {
+                answer += Integer.valueOf(arr[i]);
+            } else {
+                answer -= Integer.valueOf(arr[i - 1]);
+            }
+        }
+        
+        return answer;
+    }
 }
