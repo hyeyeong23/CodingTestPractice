@@ -177,4 +177,25 @@ public class practice07 {
         
         return answer;
     }
+    
+    /* 문자열 내 p와 y의 개수 */
+    public boolean solution4(String s) {
+        boolean answer = true;
+        int count1 = 0;
+        int count2 = 0;
+
+        String[] arr = s.toLowerCase().split("");
+        
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i].equals("p")) {
+                count1++;
+            } else if(arr[i].equals("y")) {
+                count2++;
+            }
+        }
+        if(count1 != count2) {
+            answer =  false;
+        }
+        return answer;
+    }
 }
