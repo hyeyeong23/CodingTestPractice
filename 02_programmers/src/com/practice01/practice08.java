@@ -42,4 +42,33 @@ public class practice08 {
         }
         return answer;
     }
+	
+	/* 제일 작은 수 제거하기 */
+	public int[] solution1(int[] arr) {
+        
+        if(arr.length == 1) {
+            int[] answer = {-1};
+            return answer;
+        }
+        
+        int[] answer = new int[arr.length - 1];
+        int min = arr[0];
+        int index = 0;
+        
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] < min) {
+                min = arr[i];
+            }
+            // System.out.println(min);
+        }
+        
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == min) {
+                continue;
+            }
+            answer[index++] = arr[i];
+        }
+        
+        return answer;
+    }
 }
